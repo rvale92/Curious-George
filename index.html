@@ -16,11 +16,13 @@
             align-items: center;
             justify-content: center;
             position: relative;
+            box-sizing: border-box;
         }
 
         .game-container {
-            max-width: 600px;
-            margin: 0 auto;
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
             text-align: center;
             position: relative;
             z-index: 1;
@@ -34,7 +36,7 @@
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 10px;
-            margin: 20px 0;
+            margin: 20px auto;
             max-width: 800px;
             width: 100%;
         }
@@ -47,7 +49,8 @@
             transition: transform 0.3s;
             position: relative;
             overflow: hidden;
-            min-height: 150px;
+            min-height: 100px;
+            width: 100%;
         }
 
         .card img {
@@ -69,49 +72,40 @@
 
         .corner-image {
             position: fixed;
-            width: 300px;
-            height: 300px;
+            width: 200px;
+            height: 200px;
             z-index: 0;
             object-fit: contain;
             pointer-events: none;
             mix-blend-mode: normal;
         }
 
-        #corner1 {
-            top: 50px;
-            left: 50px;
-        }
+        #corner1 { top: 20px; left: 20px; }
+        #corner2 { top: 20px; right: 20px; }
+        #corner3 { bottom: 20px; left: 20px; }
+        #corner4 { bottom: 20px; right: 20px; }
 
-        #corner2 {
-            top: 50px;
-            right: 50px;
-        }
-
-        #corner3 {
-            bottom: 50px;
-            left: 50px;
-        }
-
-        #corner4 {
-            bottom: 50px;
-            right: 50px;
+        h1 {
+            font-size: 2em;
+            margin: 10px 0;
         }
 
         .stats {
-            margin: 20px 0;
-            font-size: 1.2em;
+            margin: 15px 0;
+            font-size: 1.1em;
             color: #333;
         }
 
         button {
             background-color: #85a2ff;
             border: none;
-            padding: 10px 20px;
+            padding: 12px 24px;
             border-radius: 5px;
             color: white;
             font-size: 1.1em;
             cursor: pointer;
             transition: background-color 0.3s;
+            margin: 10px 0;
         }
 
         button:hover {
@@ -131,10 +125,108 @@
             z-index: 1001;
         }
 
-        @media (max-width: 1200px) {
+        /* Tablet Styles */
+        @media (max-width: 1024px) {
             .corner-image {
-                width: 240px;
-                height: 240px;
+                width: 150px;
+                height: 150px;
+            }
+
+            .game-container {
+                width: 95%;
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .corner-image {
+                width: 100px;
+                height: 100px;
+            }
+
+            .game-container {
+                width: 98%;
+                padding: 10px;
+            }
+
+            .game-grid {
+                gap: 5px;
+            }
+
+            .card {
+                min-height: 70px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            .stats {
+                font-size: 1em;
+            }
+
+            button {
+                padding: 10px 20px;
+                font-size: 1em;
+            }
+        }
+
+        /* Small Mobile Styles */
+        @media (max-width: 480px) {
+            .corner-image {
+                width: 80px;
+                height: 80px;
+            }
+
+            #corner1 { top: 10px; left: 10px; }
+            #corner2 { top: 10px; right: 10px; }
+            #corner3 { bottom: 10px; left: 10px; }
+            #corner4 { bottom: 10px; right: 10px; }
+
+            h1 {
+                font-size: 1.3em;
+            }
+
+            .game-container {
+                padding: 8px;
+            }
+
+            .card {
+                min-height: 60px;
+            }
+        }
+
+        /* Landscape Mode */
+        @media (max-height: 600px) and (orientation: landscape) {
+            .corner-image {
+                width: 80px;
+                height: 80px;
+            }
+
+            .game-container {
+                margin: 10px auto;
+            }
+
+            h1 {
+                font-size: 1.3em;
+                margin: 5px 0;
+            }
+
+            .stats {
+                margin: 8px 0;
+            }
+
+            .card {
+                min-height: 60px;
             }
         }
 
