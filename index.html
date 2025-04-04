@@ -154,10 +154,10 @@
     </style>
 </head>
 <body>
-    <img src="corner-images/peppa-pig-photos-george-from-peppa-pig--m2K9A0m2Z5K9i8m2-removebg-preview.png" alt="Corner 1" class="corner-image" id="corner1">
-    <img src="corner-images/peppa-minus-amigos-de-peppa-pig-png--m2i8H7K9m2m2b1K9.jpg-removebg-preview.png" alt="Corner 2" class="corner-image" id="corner2">
-    <img src="corner-images/imagesy-removebg-preview.png" alt="Corner 3" class="corner-image" id="corner3">
-    <img src="corner-images/05c63cf9db68c38dfb8a50b3a4e5c68a-removebg-preview.png" alt="Corner 4" class="corner-image" id="corner4">
+    <img src="corner-images/corner1.png" alt="Corner 1" class="corner-image" id="corner1">
+    <img src="corner-images/corner2.png" alt="Corner 2" class="corner-image" id="corner2">
+    <img src="corner-images/corner3.png" alt="Corner 3" class="corner-image" id="corner3">
+    <img src="corner-images/corner4.png" alt="Corner 4" class="corner-image" id="corner4">
 
     <div class="game-container">
         <h1>Matching Game</h1>
@@ -174,14 +174,14 @@
 
     <script>
         const cardImages = [
-            'Matching-Game/w.png',
-            'Matching-Game/e.jpeg',
-            'Matching-Game/r.png',
-            'Matching-Game/s.jpeg',
-            'Matching-Game/images-3.png',
-            'Matching-Game/images-2.png',
-            'Matching-Game/images-2.jpeg',
-            'Matching-Game/images.png'
+            'Matching-Game/card1.png',
+            'Matching-Game/card2.jpg',
+            'Matching-Game/card3.png',
+            'Matching-Game/card4.jpg',
+            'Matching-Game/card5.png',
+            'Matching-Game/card6.png',
+            'Matching-Game/card7.jpg',
+            'Matching-Game/card8.png'
         ];
 
         // Function to create a new audio instance
@@ -242,10 +242,10 @@
         // Preload images
         function preloadImages() {
             const images = [...cardImages, 
-                'corner-images/peppa-pig-photos-george-from-peppa-pig--m2K9A0m2Z5K9i8m2-removebg-preview.png',
-                'corner-images/peppa-minus-amigos-de-peppa-pig-png--m2i8H7K9m2m2b1K9.jpg-removebg-preview.png',
-                'corner-images/imagesy-removebg-preview.png',
-                'corner-images/05c63cf9db68c38dfb8a50b3a4e5c68a-removebg-preview.png'
+                'corner-images/corner1.png',
+                'corner-images/corner2.png',
+                'corner-images/corner3.png',
+                'corner-images/corner4.png'
             ];
             images.forEach(src => {
                 const img = new Image();
