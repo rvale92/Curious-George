@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matching Game</title>
+    <title>Curious George Matching Game</title>
     <style>
         body {
             margin: 0;
@@ -246,13 +246,13 @@
     </style>
 </head>
 <body>
-    <img src="corner-images/corner1.png" alt="Corner 1" class="corner-image" id="corner1">
-    <img src="corner-images/corner2.png" alt="Corner 2" class="corner-image" id="corner2">
-    <img src="corner-images/corner3.png" alt="Corner 3" class="corner-image" id="corner3">
-    <img src="corner-images/corner4.png" alt="Corner 4" class="corner-image" id="corner4">
+    <img src="corner-images/unnamed-removebg-preview.png" alt="Corner 1" class="corner-image" id="corner1">
+    <img src="corner-images/george-with-paint-cans-and-brushes-copy-967x1024-removebg-preview.png" alt="Corner 2" class="corner-image" id="corner2">
+    <img src="corner-images/curiousgeorge2006-removebg-preview.png" alt="Corner 3" class="corner-image" id="corner3">
+    <img src="corner-images/curious-george-a-halloween-boo-fest-removebg-preview.png" alt="Corner 4" class="corner-image" id="corner4">
 
     <div class="game-container">
-        <h1>Matching Game</h1>
+        <h1>Curious George Matching Game</h1>
         <div class="stats">
             <p>Pairs Found: <span id="pairs">0</span> of 8</p>
             <p>Moves: <span id="moves">0</span></p>
@@ -334,10 +334,10 @@
         // Preload images
         function preloadImages() {
             const images = [...cardImages, 
-                'corner-images/corner1.png',
-                'corner-images/corner2.png',
-                'corner-images/corner3.png',
-                'corner-images/corner4.png'
+                'corner-images/unnamed-removebg-preview.png',
+                'corner-images/george-with-paint-cans-and-brushes-copy-967x1024-removebg-preview.png',
+                'corner-images/curiousgeorge2006-removebg-preview.png',
+                'corner-images/curious-george-a-halloween-boo-fest-removebg-preview.png'
             ];
             images.forEach(src => {
                 const img = new Image();
