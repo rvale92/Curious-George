@@ -287,14 +287,16 @@
         }
 
         // Pre-create audio instances
-        const clickSound = createAudio('sounds/bubble-pop-22.mp3');
-        const matchSound = createAudio('sounds/chimp-monkey-hq-sound-wav-247599.mp3');
+        const clickSound = new Audio('sounds/bubble-pop-22.mp3');
+        const matchSound = new Audio('sounds/chimp-monkey-hq-sound-wav-247599.mp3');
 
         // Function to play click sound
         function playClickSound() {
             try {
-                clickSound.currentTime = 0;  // Reset to start
-                clickSound.play().catch(error => {
+                // Create a new instance each time to allow overlapping sounds
+                const sound = new Audio('sounds/bubble-pop-22.mp3');
+                sound.volume = 0.5;
+                sound.play().catch(error => {
                     debug(`Error playing click sound: ${error}`);
                 });
             } catch (error) {
@@ -305,8 +307,10 @@
         // Function to play match sound
         function playMatchSound() {
             try {
-                matchSound.currentTime = 0;  // Reset to start
-                matchSound.play().catch(error => {
+                // Create a new instance each time to allow overlapping sounds
+                const sound = new Audio('sounds/chimp-monkey-hq-sound-wav-247599.mp3');
+                sound.volume = 0.5;
+                sound.play().catch(error => {
                     debug(`Error playing match sound: ${error}`);
                 });
             } catch (error) {
