@@ -282,20 +282,15 @@
         function createAudio(src) {
             const audio = new Audio(src);
             audio.preload = 'auto';
-            audio.volume = 0.5;  // Set a default volume
             return audio;
         }
-
-        // Pre-create audio instances
-        const clickSound = new Audio('sounds/bubble-pop-22.mp3');
-        const matchSound = new Audio('sounds/chimp-monkey-hq-sound-wav-247599.mp3');
 
         // Function to play click sound
         function playClickSound() {
             try {
                 // Create a new instance each time to allow overlapping sounds
                 const sound = new Audio('sounds/bubble-pop-22.mp3');
-                sound.volume = 0.5;
+                sound.volume = 0.3;  // Lower volume for click sound
                 sound.play().catch(error => {
                     debug(`Error playing click sound: ${error}`);
                 });
@@ -309,7 +304,7 @@
             try {
                 // Create a new instance each time to allow overlapping sounds
                 const sound = new Audio('sounds/chimp-monkey-hq-sound-wav-247599.mp3');
-                sound.volume = 0.5;
+                sound.volume = 0.7;  // Higher volume for match sound
                 sound.play().catch(error => {
                     debug(`Error playing match sound: ${error}`);
                 });
