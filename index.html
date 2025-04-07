@@ -280,15 +280,19 @@
         function createAudio(src) {
             const audio = new Audio(src);
             audio.preload = 'auto';
+            audio.volume = 0.5;  // Set a default volume
             return audio;
         }
+
+        // Pre-create audio instances
+        const clickSound = createAudio('sounds/bubble-pop-22.mp3');
+        const matchSound = createAudio('sounds/crowd-cheering-sound.mp3');
 
         // Function to play click sound
         function playClickSound() {
             try {
-                const sound = createAudio('sounds/bubble-pop-22.mp3');
-                sound.volume = 0.5;
-                sound.play().catch(error => {
+                clickSound.currentTime = 0;  // Reset to start
+                clickSound.play().catch(error => {
                     debug(`Error playing click sound: ${error}`);
                 });
             } catch (error) {
@@ -299,24 +303,8 @@
         // Function to play match sound
         function playMatchSound() {
             try {
-                const sound = new Audio('sounds/crowd-cheering-sound.mp3');
-                sound.volume = 1.0;
-                
-                // Add event listeners to handle the sound
-                sound.addEventListener('canplaythrough', () => {
-                    sound.play().then(() => {
-                        debug('Match sound playing successfully');
-                    }).catch(error => {
-                        debug(`Error playing match sound: ${error}`);
-                    });
-                });
-
-                sound.addEventListener('error', (e) => {
-                    debug(`Error loading match sound: ${e.message}`);
-                });
-
-                // Try to play immediately
-                sound.play().catch(error => {
+                matchSound.currentTime = 0;  // Reset to start
+                matchSound.play().catch(error => {
                     debug(`Error playing match sound: ${error}`);
                 });
             } catch (error) {
