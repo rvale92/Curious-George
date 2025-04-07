@@ -266,14 +266,14 @@
 
     <script>
         const cardImages = [
-            'Matching-Game/images copy.jpeg',
-            'Matching-Game/images-2 copy.jpeg',
-            'Matching-Game/images-3 copy.jpeg',
-            'Matching-Game/images-4 copy.jpeg',
-            'Matching-Game/3images-3 copy.jpeg',
-            'Matching-Game/7images-3 copy.jpeg',
-            'Matching-Game/MV5BNTJjNDNlMmUtNzkxNi00ZDMwLThlMjItNDIyZGY5Y2U4MTk3XkEyXkFqcGc@._V1_FMjpg_UX1000_ copy.jpg',
-            'Matching-Game/Curious-George-The-Elephant-Upstairs-Edible-Cake-Topper-Image-ABPID00017_b754847e-bc39-4c10-abd3-82575665e611_1.3b6c3687402686625338417ac01fa992 copy.jpeg.webp'
+            'Matching-Game/card1.png',
+            'Matching-Game/card2.jpg',
+            'Matching-Game/card3.png',
+            'Matching-Game/card4.jpg',
+            'Matching-Game/card5.png',
+            'Matching-Game/card6.png',
+            'Matching-Game/card7.jpg',
+            'Matching-Game/card8.png'
         ];
 
         // Function to create a new audio instance
